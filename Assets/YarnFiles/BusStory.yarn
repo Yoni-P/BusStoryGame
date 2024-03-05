@@ -1,0 +1,127 @@
+title: Start
+position: 216,-233
+---
+
+<<declare $groupNumber = 0>>
+<<declare $firstKey = false>>
+
+<<set $tappedShoulder = setSpeaker()>>
+//<<declare $tappedShoulder = 0>>
+Can you let me pass please?
+<<if $tappedShoulder == 0>>
+    <<jump PersonA1>>
+<<elseif $tappedShoulder == 1>>
+    <<jump PersonA2>>
+<<elseif $tappedShoulder == 2>>
+    <<jump PersonA3>>
+<<endif>>
+// You must get off the bus!
+// These people are blocking the way!
+// Choose someone to talk to.
+// <<jump TapOnTheBack>>
+
+===
+
+title: TapOnTheBack
+position: 250,223
+---
+-> Tap on Person A
+    <<jump personA>>
+-> Tap on Person B
+    <<jump personB>>
+-> Tap on Person C
+    <<jump personC>>
+
+===
+
+title: personA
+position: -13,436
+---
+<<if $groupNumber == 0>>
+    <<jump personA0>>
+
+<<elseif $groupNumber == 1>>
+    <<jump personA1>>
+
+<<elseif $groupNumber == 2>>
+    <<jump personA2>>
+
+<<elseif $groupNumber == 3>>
+    <<jump personA3>>
+
+<<endif>>
+
+===
+
+title: personB
+position: 599,399
+---
+<<if $groupNumber == 0>>
+    <<jump personB0>>
+
+<<elseif $groupNumber == 1>>
+    <<jump personB1>>
+
+<<elseif $groupNumber == 2>>
+    <<jump personB2>>
+
+<<elseif $groupNumber == 3>>
+    <<jump personB3>>
+
+<<endif>>
+
+===
+
+title: personC
+position: 245,439
+---
+<<if $groupNumber == 0>>
+    <<jump personC0>>
+
+<<elseif $groupNumber == 1>>
+    <<jump personC1>>
+
+<<elseif $groupNumber == 2>>
+    <<jump personC2>>
+
+<<elseif $groupNumber == 3>>
+    <<jump personC3>>
+
+<<endif>>
+
+===
+
+title: personA0
+position: -21,668
+---
+-> Excuse me
+    <<get_off>>
+-> Move please
+    No.
+-> Get out of my way!
+    No!
+
+===
+
+title: personB0
+position: 565,661
+---
+-> Excuse me
+    <<get_off>>
+-> Move please
+    No.
+-> Get out of my way!
+    No!
+
+===
+
+title: personC0
+position: 257,672
+---
+-> Excuse me
+    <<get_off>>
+-> Move please
+    No.
+-> Get out of my way!
+    No!
+===

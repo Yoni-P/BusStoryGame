@@ -1,0 +1,14 @@
+title: PersonA1
+---
+Love is a madness most discreet, consuming hearts in silent flames, where reason yields to passion's sweet embrace.
+
+-> What?
+    Sorry, did you say something?
+
+-> Yes, I asked if I can pass you
+    True love doth ne'er run smooth, yet 'tis a balm that soothes the wounds of time, knitting souls in fate's eternal dance.
+-> What did you say?
+    *Sigh* Sometimes true love is just two steps to your left.
+    <<set $avihaiKey = true>>
+<<stop>>
+===

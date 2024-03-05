@@ -1,0 +1,590 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 53
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07c9b2c97f84356bb2bfac29363e611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StyleTrainerData:
+    rid: 9079704928998653952
+  m_DefaultStyleData:
+    rid: 9079704928998653953
+  m_DefaultStyleVersion: 2023111600
+  m_DefaultStyles:
+  - rid: 9079704928998654200
+  m_AssetPath: 
+  m_PreviousProjectIDs: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 9079704928998653952
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 72409866-961f-4302-84c1-e3879af373d3
+        m_State: 1
+        m_Disposing: 0
+        m_Styles:
+        - rid: 9079704928998654201
+        m_Version: 202231001
+    - rid: 9079704928998653953
+      type: {class: StyleTrainerData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 11000000-0000-0000-0000-000000000011
+        m_State: 1
+        m_Disposing: 0
+        m_Styles:
+        - rid: 9079704998306643968
+        m_Version: 202231001
+    - rid: 9079704928998654200
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 00000000-0000-0000-0000-000000000000
+        m_State: 1
+        m_Disposing: 0
+        m_IsFallback: 1
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 0
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: active
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 00000000-0000-0000-0000-000000000000
+        m_TrainingSteps: 2000
+        m_CheckPoints:
+        - m_Guid: 00000000-0000-0000-0000-000000000000
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 00000000-0000-0000-0000-000000000000
+          m_Name: Default
+          m_Description: Default style.
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 
+            m_State: 0
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: 
+          m_ValidationImagesData: []
+          m_TrainingSteps: 2000
+        m_SampleOutputPrompts: []
+        m_TrainingSetData: []
+        m_Name: Default
+        m_Description: Default style.
+    - rid: 9079704928998654201
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: e771fc9f-df74-40fb-af8c-b0135560af7a
+        m_State: 1
+        m_Disposing: 0
+        m_IsFallback: 0
+        m_Thumbnail:
+          rid: 9079704928998654203
+        m_Visible: 1
+        selectedCheckPointGUID: 110a5445-671d-4c7d-b40e-e9c79f2cdf09
+        m_FavoriteCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+        m_TrainingSteps: 2000
+        m_CheckPoints:
+        - m_Guid: 7caee8e1-1f4d-4d64-80a6-bc3779c24c8a
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 6dc65f49-cadc-4c00-9905-b8bdc46768ae
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 6dc65f49-cadc-4c00-9905-b8bdc46768ae
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: a2d259b1-1f29-4ab7-a3a6-d807feeac322
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: a2d259b1-1f29-4ab7-a3a6-d807feeac322
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: cbcaf991-3792-4a6e-a88b-5a1ace5987ae
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: cbcaf991-3792-4a6e-a88b-5a1ace5987ae
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 200
+        - m_Guid: a1f9e636-64e2-41eb-93eb-d124386ce706
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 5ada7bf3-8052-489d-b8f2-dca9ae684f21
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 5ada7bf3-8052-489d-b8f2-dca9ae684f21
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: 65480044-8fd7-453d-913d-5a9dea039c98
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 65480044-8fd7-453d-913d-5a9dea039c98
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: f79fcb3b-4905-4f8c-bd45-8c61bb25719c
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: f79fcb3b-4905-4f8c-bd45-8c61bb25719c
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 400
+        - m_Guid: b28db2a5-301f-4460-bc0c-09bce99e4639
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 74fdad0a-845f-44df-ba59-c697296e0341
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 74fdad0a-845f-44df-ba59-c697296e0341
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: f0f901b0-182d-4a43-a5d1-a5f39e9111f8
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: f0f901b0-182d-4a43-a5d1-a5f39e9111f8
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: 246a12fb-8768-457e-8667-ba80445426f1
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 246a12fb-8768-457e-8667-ba80445426f1
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 600
+        - m_Guid: 0f8f9733-a03a-48b4-9022-cf9c0a48fc13
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 70e9f347-e786-4fcb-aa03-b5cca763da07
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 70e9f347-e786-4fcb-aa03-b5cca763da07
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: a5545a11-255b-4b49-b164-823de75c7172
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: a5545a11-255b-4b49-b164-823de75c7172
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: 2bf2796c-83e7-4578-a0ff-18812ef362d1
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 2bf2796c-83e7-4578-a0ff-18812ef362d1
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 800
+        - m_Guid: 39375c98-9ca2-47a0-9580-820d4718e831
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 81f686b8-76a5-44c2-9426-2bec1b93da56
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 81f686b8-76a5-44c2-9426-2bec1b93da56
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: 32e4801d-9ae3-4046-8a9d-f66959e26d87
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 32e4801d-9ae3-4046-8a9d-f66959e26d87
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: 51ca442e-ea5a-4b68-afd9-96f614d70d2d
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 51ca442e-ea5a-4b68-afd9-96f614d70d2d
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 1000
+        - m_Guid: 2b22bdce-2df1-4403-a4a8-cc34b712e3ba
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 27d784e9-b7bf-4c1f-9da5-c0a8dc19dc1b
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 27d784e9-b7bf-4c1f-9da5-c0a8dc19dc1b
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: fbf6fe13-9e1a-4a10-96b4-3ff18091f13c
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: fbf6fe13-9e1a-4a10-96b4-3ff18091f13c
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: 34551ccd-936c-4dc0-896c-abfffffad637
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 34551ccd-936c-4dc0-896c-abfffffad637
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 1200
+        - m_Guid: 113c0071-9ea8-4dc0-87a0-5466ed13dd0e
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 57959597-8ca5-4432-b554-d807f92c95f1
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 57959597-8ca5-4432-b554-d807f92c95f1
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: 945d152d-c672-47be-8e51-2e64ad40ed32
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 945d152d-c672-47be-8e51-2e64ad40ed32
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: 105e1416-4be8-4ef5-ace1-843211164127
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 105e1416-4be8-4ef5-ace1-843211164127
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 1400
+        - m_Guid: 1b413964-b301-4538-bef6-473d7e2f483e
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 376d6d64-9cdb-4ed8-b0e9-e87c486e8691
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 376d6d64-9cdb-4ed8-b0e9-e87c486e8691
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: 90d21ab6-ee9b-420d-b6bd-68eec5ac86e8
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 90d21ab6-ee9b-420d-b6bd-68eec5ac86e8
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: 2f1357a7-89d4-4734-b2b4-655c69568a3c
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 2f1357a7-89d4-4734-b2b4-655c69568a3c
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 1600
+        - m_Guid: d39b0617-5b83-48a8-ba86-2efabe0cbe83
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 0318d6f1-aaa8-47e8-bbc4-a96c39680e1e
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 0318d6f1-aaa8-47e8-bbc4-a96c39680e1e
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: 6b0245e8-85d1-4259-839c-33e2c4723997
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 6b0245e8-85d1-4259-839c-33e2c4723997
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: 464bcf79-17eb-4f22-81c5-110c67938484
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 464bcf79-17eb-4f22-81c5-110c67938484
+              m_State: 1
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 1800
+        - m_Guid: 110a5445-671d-4c7d-b40e-e9c79f2cdf09
+          m_State: 5
+          m_Disposing: 0
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_Name: Cartoon bus
+          m_Description: for a 2d cartoon bus setting
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+            m_State: 5
+            m_Disposing: 1
+            m_TrainingSet: []
+            m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+          m_ValidationImagesData:
+          - m_Guid: 00000000-0000-0000-0000-000000000000
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 00000000-0000-0000-0000-000000000000
+              m_State: 5
+              m_Disposing: 1
+            m_Prompt: sprite sheet of bus passengers.
+          - m_Guid: 00000000-0000-0000-0000-000000000000
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 00000000-0000-0000-0000-000000000000
+              m_State: 5
+              m_Disposing: 1
+            m_Prompt: 12 bus passengers sprite sheet.
+          - m_Guid: 00000000-0000-0000-0000-000000000000
+            m_State: 5
+            m_Disposing: 1
+            m_ImageArtifact:
+              m_Guid: 00000000-0000-0000-0000-000000000000
+              m_State: 5
+              m_Disposing: 1
+            m_Prompt: bus passengers.
+          m_TrainingSteps: 2000
+        m_SampleOutputPrompts:
+        - sprite sheet of bus passengers.
+        - 12 bus passengers sprite sheet.
+        - bus passengers.
+        m_TrainingSetData:
+        - m_Guid: 9186bc30-1015-4622-af63-fe05fcd8d6c7
+          m_State: 4
+          m_Disposing: 0
+          m_TrainingSet: []
+          m_ProjectID: 72409866-961f-4302-84c1-e3879af373d3
+        m_Name: Cartoon bus
+        m_Description: for a 2d cartoon bus setting
+    - rid: 9079704928998654203
+      type: {class: ImageArtifact, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 00000000-0000-0000-0000-000000000000
+        m_State: 3
+        m_Disposing: 1
+    - rid: 9079704998306643968
+      type: {class: StyleData, ns: Unity.Muse.StyleTrainer, asm: Unity.Muse.StyleTrainer}
+      data:
+        m_Guid: 5cc104e0-423a-473e-8034-b9d346cb2357
+        m_State: 1
+        m_Disposing: 0
+        m_IsFallback: 0
+        m_Thumbnail:
+          rid: -2
+        m_Visible: 1
+        selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+        m_FavoriteCheckPointGUID: active
+        parentID: 00000000-0000-0000-0000-000000000000
+        m_ProjectID: 11000000-0000-0000-0000-000000000011
+        m_TrainingSteps: 2000
+        m_CheckPoints:
+        - m_Guid: 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          m_State: 1
+          m_Disposing: 0
+          m_ProjectID: 11000000-0000-0000-0000-000000000011
+          m_Name: Happy Harvest [Orion V4 2000]
+          m_Description: 8 Nov 2023
+          parent_id: 00000000-0000-0000-0000-000000000000
+          m_TrainingSetData:
+            m_Guid: 3e758588-960f-44f5-865a-d5eaa1b1dec4
+            m_State: 5
+            m_Disposing: 0
+            m_TrainingSet: []
+            m_ProjectID: 11000000-0000-0000-0000-000000000011
+          m_ValidationImagesData:
+          - m_Guid: 96b39a19-2d3e-4bc5-aa3c-38667ed6eba5
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 96b39a19-2d3e-4bc5-aa3c-38667ed6eba5
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A chicken
+          - m_Guid: 05de072c-ebbc-43d7-886b-7ac4f9cbd079
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 05de072c-ebbc-43d7-886b-7ac4f9cbd079
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A cow
+          - m_Guid: 2dbfc212-f87b-45f9-a05a-06368e190ca1
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 2dbfc212-f87b-45f9-a05a-06368e190ca1
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A dog
+          - m_Guid: e0139464-a868-402a-95b8-b4c26685a97b
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: e0139464-a868-402a-95b8-b4c26685a97b
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A farmer
+          - m_Guid: 4421bead-a3ff-4c09-9514-61e127eb470e
+            m_State: 5
+            m_Disposing: 0
+            m_ImageArtifact:
+              m_Guid: 4421bead-a3ff-4c09-9514-61e127eb470e
+              m_State: 5
+              m_Disposing: 0
+            m_Prompt: A pine tree
+          m_TrainingSteps: 1200
+        m_SampleOutputPrompts:
+        - A chicken
+        - A cow
+        - A dog
+        - A farmer
+        - A pine tree
+        m_TrainingSetData:
+        - m_Guid: 3e758588-960f-44f5-865a-d5eaa1b1dec4
+          m_State: 5
+          m_Disposing: 0
+          m_TrainingSet: []
+          m_ProjectID: 11000000-0000-0000-0000-000000000011
+        m_Name: Default
+        m_Description: Default Style
