@@ -24,4 +24,16 @@ public class DialogueManager : MonoBehaviour
     {
         return _currentSpeaker;
     }
+    
+    [YarnCommand("SpeakerLookBack")]
+    public static void SpeakerLookForward()
+    {
+        GameManager.instance.MakeCharacterLookBack(_currentSpeaker);
+    }
+    
+    [YarnCommand("SpeakerLookForward")]
+    public static void SpeakerLookBack()
+    {
+        GameManager.instance.MakeCharacterLookForward(_currentSpeaker);
+    }
 }

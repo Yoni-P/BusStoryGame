@@ -7,7 +7,7 @@ position: 216,-233
 
 <<set $tappedShoulder = setSpeaker()>>
 //<<declare $tappedShoulder = 0>>
-Can you let me pass please?
+->Can you let me pass please?
 <<if $tappedShoulder == 0>>
     <<jump PersonA1>>
 <<elseif $tappedShoulder == 1>>

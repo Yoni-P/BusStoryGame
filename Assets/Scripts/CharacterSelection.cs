@@ -39,6 +39,16 @@ public class CharacterSelection : MonoBehaviour
         transform.DOScale(_originalScale, 0.5f);
     }
     
+    public void LookBack()
+    {
+        spriteRenderer.sprite = turnBackSprite;
+    }
+    
+    public void LookForward()
+    {
+        spriteRenderer.sprite = idleSprite;
+    }
+    
     private void OnMouseDown()
     {
         if (_isDialogueActive) return;
@@ -50,13 +60,13 @@ public class CharacterSelection : MonoBehaviour
         dialogObject.SetActive(true);
         dialogObject.GetComponent<DialogueRunner>().StartDialogue("Start");
         dialogObject.GetComponent<DialogueRunner>().onDialogueComplete.AddListener(EndDialogue);
-        spriteRenderer.sprite = turnBackSprite;
+        //spriteRenderer.sprite = turnBackSprite;
     }
     
     public void EndDialogue()
     {
         _isDialogueActive = false;
-        spriteRenderer.sprite = idleSprite;
+        //spriteRenderer.sprite = idleSprite;
         dialogObject.GetComponent<DialogueRunner>().onDialogueComplete.RemoveListener(EndDialogue);
     }
 }
