@@ -36,4 +36,10 @@ public class DialogueManager : MonoBehaviour
     {
         GameManager.instance.MakeCharacterLookForward(_currentSpeaker);
     }
+    
+    [YarnCommand("switchPlaces")]
+    public static void switchPlaces(int speaker1, int speaker2)
+    {
+        GameManager.instance.SwitchPlaces(speaker1, speaker2);
+    }
 }

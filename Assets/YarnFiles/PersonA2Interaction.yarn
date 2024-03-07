@@ -1,7 +1,7 @@
 title: PersonA2
 ---
 <<SpeakerLookBack>>
-B:What! if let you pass everyone will want to pass me!
+B:What! if I let you pass everyone will want to pass me!
 
 <<if $avihaiKey == false>>
 -> Ugh
@@ -10,7 +10,8 @@ B:What! if let you pass everyone will want to pass me!
 -> Hey, maybe you can switch places with the guy to you right?
     B:Fine, if you give me 20 shekels
         -> Ok *give him 20 shekels*
-            P:Switched places
+            B:Sucker #last
+            <<switchPlaces 0 1>>
         -> No way
     
 <<endif>>

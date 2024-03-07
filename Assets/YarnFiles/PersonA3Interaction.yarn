@@ -3,7 +3,7 @@ title: PersonA3
 <<SpeakerLookForward>>
 C:*has headphones on and ignores you*
  
- -> Hello? can you her me?
+ -> Hello? can you hear me?
     C:*ignores* #last
 -> Tap her on the back
     <<SpeakerLookBack>>
