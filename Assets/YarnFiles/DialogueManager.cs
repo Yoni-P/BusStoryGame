@@ -42,4 +42,34 @@ public class DialogueManager : MonoBehaviour
     {
         GameManager.instance.SwitchPlaces(speaker1, speaker2);
     }
+    
+    [YarnCommand("loadNextGroup")]
+    public static void loadNextGroup()
+    {
+        GameManager.instance.LoadNextGroup();
+    }
+    
+    [YarnCommand("lookForward")]
+    public static void lookForward(int speaker)
+    {
+        GameManager.instance.MakeCharacterLookForward(speaker);
+    }
+    
+    [YarnCommand("lookBack")]
+    public static void lookBack(int speaker)
+    {
+        GameManager.instance.MakeCharacterLookBack(speaker);
+    }
+
+    [YarnCommand("beatUpEnding")]
+    public static void beatUpEnding()
+    {
+        GameManager.instance.BeatUpEnding();
+    }
+
+    [YarnCommand("characterLeave")]
+    public static void characterLeave(int speaker)
+    {
+        GameManager.instance.CharacterLeave(speaker);
+    }
 }

@@ -1,5 +1,5 @@
 title: Start
-position: 216,-233
+position: 234,-882
 ---
 
 <<declare $groupNumber = 0>>
@@ -15,113 +15,139 @@ position: 216,-233
 <<elseif $tappedShoulder == 2>>
     <<jump PersonA3>>
 <<endif>>
-// You must get off the bus!
-// These people are blocking the way!
-// Choose someone to talk to.
-// <<jump TapOnTheBack>>
 
 ===
 
-title: TapOnTheBack
-position: 250,223
+title: PersonA1
+position: -140,-502
 ---
--> Tap on Person A
-    <<jump personA>>
--> Tap on Person B
-    <<jump personB>>
--> Tap on Person C
-    <<jump personC>>
+<<SpeakerLookForward>>
+A:Love is a madness most discreet, consuming hearts in silent flames, where reason yields to passion's sweet embrace.
 
+-> What?
+    <<SpeakerLookBack>>
+    A:Sorry, did you say something?
+
+-> Yes, I asked if I can pass you
+    A:True love doth ne'er run smooth, yet 'tis a balm that soothes the wounds of time, knitting souls in fate's eternal dance. #last
+-> What did you say?
+    A:*Sigh* I think my true love is just two steps to my left. #last
+    <<set $avihaiKey = true>>
+<<SpeakerLookForward>>
+<<stop>>
 ===
 
-title: personA
-position: -13,436
+title: PersonA2
+position: 256,-462
 ---
-<<if $groupNumber == 0>>
-    <<jump personA0>>
+<<declare $alreadyTappedB = false>>
+<<SpeakerLookBack>>
 
-<<elseif $groupNumber == 1>>
-    <<jump personA1>>
-
-<<elseif $groupNumber == 2>>
-    <<jump personA2>>
-
-<<elseif $groupNumber == 3>>
-    <<jump personA3>>
-
+<<if $alreadyTappedB>>
+B:I already told you, Im not moving!
+<<else>>
+B:What! if I let you pass everyone will want to pass me!
+<<set $alreadyTappedB = true>>
 <<endif>>
 
-===
-
-title: personB
-position: 599,399
----
-<<if $groupNumber == 0>>
-    <<jump personB0>>
-
-<<elseif $groupNumber == 1>>
-    <<jump personB1>>
-
-<<elseif $groupNumber == 2>>
-    <<jump personB2>>
-
-<<elseif $groupNumber == 3>>
-    <<jump personB3>>
-
+<<if $avihaiKey == false>>
+-> Ugh
+<<else>>
+-> Ugh
+-> Hey, maybe you can switch places with the guy to you right?
+    B:Fine, if you give me 20 shekels
+        -> Ok *give him 20 shekels*
+            B:Sucker #last
+            <<SpeakerLookForward>>
+            <<switchPlaces 0 1>>
+            <<wait 1>>
+            <<jump AHitOnC>>
+        -> No way
+    
 <<endif>>
 
+<<SpeakerLookForward>>
+<<stop>>
 ===
 
-title: personC
-position: 245,439
+title: PersonA3
+position: 581,-481
 ---
-<<if $groupNumber == 0>>
-    <<jump personC0>>
+<<declare $tappedAlready = false>>
+<<declare $numTaps = 0>>
+<<SpeakerLookForward>>
 
-<<elseif $groupNumber == 1>>
-    <<jump personC1>>
+C:*has headphones on and ignores you*
+-> Hello? can you hear me?
+    C:*ignores* #last
+    <<SpeakerLookForward>>
+    <<stop>>
+-> Tap her on the back
+    <<SpeakerLookBack>>
 
-<<elseif $groupNumber == 2>>
-    <<jump personC2>>
+    <<if $numTaps == 0>>
+        <<set $numTaps += 1>>
+        C:Ew! Creep! Don't touch me! #last
+        -> Tap again
+            C:I said don't touch me!!
+            <<set $numTaps += 1>>
+            -> Tap once more
+                <<set $numTaps += 1>>
+                C:Help, this man is assaulting me!
+                <<jump PersonA1Hero>>
+            -> Leave her alone
+        -> Leave her be
+    <<elseif $numTaps == 1>>
+        <<set $numTaps += 1>>
+        C:I said don't touch me!!
+            -> Tap again
+                <<set $numTaps += 1>>
+                C:Help, this man is assaulting me!
+                <<jump PersonA1Hero>>
+    <<elseif $numTaps == 2>>
+        <<set $numTaps += 1>>
+        C:Help, this man is assaulting me!
+        <<jump PersonA1Hero>>
+    <<endif>>
 
-<<elseif $groupNumber == 3>>
-    <<jump personC3>>
-
-<<endif>>
-
+<<SpeakerLookForward>>
+<<set $tappedAlready = true>>
+<<stop>>
 ===
 
-title: personA0
-position: -21,668
+title: PersonA1Hero
+position: 586,-206
 ---
--> Excuse me
-    <<get_off>>
--> Move please
-    No.
--> Get out of my way!
-    No!
-
+<<lookBack 0>>
+A: Leave her alone!
+-> No way! I have to get off the bus!
+    A:Then you leave me no choice!
+    <<beatUpEnding>>
+-> Fine
+    A:And say your'e sorry
+    -> I'm sorry
+        C:Thank you for standing up for me.
+        A:No problem, let's get our of here.
+        C:I have a boyfriend.
+        A:*leaves from embarrassment*
+        <<characterLeave 0>>
+        <<wait 5>>
+        <<loadNextGroup>>
+<<stop>>
 ===
 
-title: personB0
-position: 565,661
----
--> Excuse me
-    <<get_off>>
--> Move please
-    No.
--> Get out of my way!
-    No!
 
-===
-
-title: personC0
-position: 257,672
+title: AHitOnC
 ---
--> Excuse me
-    <<get_off>>
--> Move please
-    No.
--> Get out of my way!
-    No!
+<<lookBack 0>>
+A: Hey
+<<lookBack 2>>
+C: Can I help you?
+A: Thou art the fairest flower in this garden of hearts, wilt thou grant me the pleasure of thy company?
+C: Weirdo
+<<characterLeave 2>>
+<<lookForward 0>>
+A: *sobbing*
+<<loadNextGroup>>
+<<stop>>
 ===

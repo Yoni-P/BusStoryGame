@@ -19,7 +19,7 @@ public class CharacterSelection : MonoBehaviour
     private static bool _isDialogueActive = false;
     
     private float _originalScale;
-    private void Start()
+    private void Awake()
     {
         _originalScale = transform.localScale.x;
     }
@@ -68,5 +68,15 @@ public class CharacterSelection : MonoBehaviour
         _isDialogueActive = false;
         //spriteRenderer.sprite = idleSprite;
         dialogObject.GetComponent<DialogueRunner>().onDialogueComplete.RemoveListener(EndDialogue);
+    }
+
+    public void StopGlow()
+    {
+        spriteRenderer.material.SetFloat("_GlowEffect", 0);
+    }
+
+    public void MakeGlow()
+    {
+        spriteRenderer.material.SetFloat("_GlowEffect", 1);
     }
 }

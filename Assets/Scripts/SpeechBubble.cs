@@ -36,16 +36,28 @@ public class SpeechBubble : DialogueViewBase
         if (curSpeechBubble != null)
         {
             ActivateCurSpeechBubble(dialogueLine.CharacterName);
+            ActivateGlow(dialogueLine.CharacterName);
             curSpeechBubble.GetComponentInChildren<TextMeshProUGUI>().text = dialogueLine.TextWithoutCharacterName.Text;
         }
 
+        onDialogueLineFinished += GameManager.instance.MakeCharactersStopGlow;
         StartCoroutine(InnerRunLine(dialogueLine, onDialogueLineFinished));
     }
-    
+
+    private void ActivateGlow(string dialogueLineCharacterName)
+    {
+        if (dialogueLineCharacterName is null or "P") return;
+        GameManager.instance.MakeCharacterGlow(dialogueLineCharacterName[0] % 'A');
+    }
+
     private IEnumerator InnerRunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
     {
         bool isLastLine = dialogueLine.Metadata != null && dialogueLine.Metadata.Contains("last");
-        if (isLastLine) yield break;
+        bool isLineBeforeOption = dialogueLine.Metadata != null && dialogueLine.Metadata.Contains("lastLine");
+        // debug log the metadata by joining the list of strings
+        if (dialogueLine.Metadata != null) Debug.Log(string.Join(", ", dialogueLine.Metadata));
+        
+        if (isLastLine || isLineBeforeOption) yield break;
         yield return new WaitForSeconds(2);
         onDialogueLineFinished?.Invoke();
     }
@@ -67,6 +79,7 @@ public class SpeechBubble : DialogueViewBase
 
     public override void DialogueComplete()
     {
+        GameManager.instance.MakeCharactersStopGlow();
         if (curSpeechBubble != null)
         {
             curSpeechBubble.SetActive(false);
