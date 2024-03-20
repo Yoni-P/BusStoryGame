@@ -14,6 +14,9 @@ public class SpeechBubble : DialogueViewBase
     [SerializeField] private GameObject speechBubbleA;
     [SerializeField] private GameObject speechBubbleB;
     [SerializeField] private GameObject speechBubbleC;
+    [SerializeField] private GameObject speechBubbleD;
+    [SerializeField] private GameObject speechBubbleE;
+    [SerializeField] private GameObject speechBubbleF;
     
     private Dictionary<String, GameObject> nameToSpeechBubble = new Dictionary<string, GameObject>();
     private LocalizedLine curDialogueLine;
@@ -25,6 +28,9 @@ public class SpeechBubble : DialogueViewBase
         nameToSpeechBubble.Add("A", speechBubbleA);
         nameToSpeechBubble.Add("B", speechBubbleB);
         nameToSpeechBubble.Add("C", speechBubbleC);
+        nameToSpeechBubble.Add("D", speechBubbleD);
+        nameToSpeechBubble.Add("E", speechBubbleE);
+        nameToSpeechBubble.Add("F", speechBubbleF);
     }
 
     public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
@@ -57,7 +63,7 @@ public class SpeechBubble : DialogueViewBase
         // debug log the metadata by joining the list of strings
         if (dialogueLine.Metadata != null) Debug.Log(string.Join(", ", dialogueLine.Metadata));
         
-        if (isLastLine || isLineBeforeOption) yield break;
+        if (isLastLine || dialogueLine.Metadata == null) yield break;
         yield return new WaitForSeconds(2);
         onDialogueLineFinished?.Invoke();
     }

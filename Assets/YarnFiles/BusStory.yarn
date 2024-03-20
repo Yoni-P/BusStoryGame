@@ -4,7 +4,7 @@ position: 234,-882
 
 <<declare $groupNumber = 0>>
 <<declare $firstKey = false>>
-
+<<declare $weedKey = false>>
 <<set $tappedShoulder = setSpeaker()>>
 //<<declare $tappedShoulder = 0>>
 ->Can you let me pass please?
@@ -14,24 +14,29 @@ position: 234,-882
     <<jump PersonA2>>
 <<elseif $tappedShoulder == 2>>
     <<jump PersonA3>>
+<<elseif $tappedShoulder == 3>>
+    <<jump PersonB1>>
+<<elseif $tappedShoulder == 4>>
+    <<jump PersonB2>>
+<<elseif $tappedShoulder == 5>>
+    <<jump PersonB3>>
 <<endif>>
-
 ===
 
 title: PersonA1
 position: -140,-502
 ---
 <<SpeakerLookForward>>
-A:Love is a madness most discreet, consuming hearts in silent flames, where reason yields to passion's sweet embrace.
+A: Love is a madness most discreet, consuming hearts in silent flames, where reason yields to passion's sweet embrace.
 
 -> What?
     <<SpeakerLookBack>>
-    A:Sorry, did you say something?
+    A: Sorry, did you say something?
 
 -> Yes, I asked if I can pass you
-    A:True love doth ne'er run smooth, yet 'tis a balm that soothes the wounds of time, knitting souls in fate's eternal dance. #last
+    A: True love doth ne'er run smooth, yet 'tis a balm that soothes the wounds of time, knitting souls in fate's eternal dance. #last
 -> What did you say?
-    A:*Sigh* I think my true love is just two steps to my left. #last
+    A: *Sigh* I think my true love is just two steps to my left, If only we were closer... #last
     <<set $avihaiKey = true>>
 <<SpeakerLookForward>>
 <<stop>>
@@ -44,9 +49,9 @@ position: 256,-462
 <<SpeakerLookBack>>
 
 <<if $alreadyTappedB>>
-B:I already told you, Im not moving!
+B: I already told you, I'm not moving!
 <<else>>
-B:What! if I let you pass everyone will want to pass me!
+B: What! If I let you pass, everyone will want to pass me!
 <<set $alreadyTappedB = true>>
 <<endif>>
 
@@ -54,13 +59,13 @@ B:What! if I let you pass everyone will want to pass me!
 -> Ugh
 <<else>>
 -> Ugh
--> Hey, maybe you can switch places with the guy to you right?
-    B:Fine, if you give me 20 shekels
+-> Hey, maybe you can switch places with the guy to your right?
+    B: Fine, if you give me 20 shekels
         -> Ok *give him 20 shekels*
-            B:Sucker #last
+            B: Sucker #last
             <<SpeakerLookForward>>
             <<switchPlaces 0 1>>
-            <<wait 1>>
+            <<wait 2>>
             <<jump AHitOnC>>
         -> No way
     
@@ -77,9 +82,9 @@ position: 581,-481
 <<declare $numTaps = 0>>
 <<SpeakerLookForward>>
 
-C:*has headphones on and ignores you*
--> Hello? can you hear me?
-    C:*ignores* #last
+C: *Has headphones on and ignores you*
+-> Hello? Can you hear me?
+    C: *Ignores* #last
     <<SpeakerLookForward>>
     <<stop>>
 -> Tap her on the back
@@ -87,26 +92,26 @@ C:*has headphones on and ignores you*
 
     <<if $numTaps == 0>>
         <<set $numTaps += 1>>
-        C:Ew! Creep! Don't touch me! #last
+        C: Ew! Creep! Don't touch me! #last
         -> Tap again
-            C:I said don't touch me!!
+            C: I said don't touch me!!
             <<set $numTaps += 1>>
             -> Tap once more
                 <<set $numTaps += 1>>
-                C:Help, this man is assaulting me!
+                C: Help, this man is assaulting me!
                 <<jump PersonA1Hero>>
             -> Leave her alone
         -> Leave her be
     <<elseif $numTaps == 1>>
         <<set $numTaps += 1>>
-        C:I said don't touch me!!
+        C: I said don't touch me!!
             -> Tap again
                 <<set $numTaps += 1>>
-                C:Help, this man is assaulting me!
+                C: Help, this man is assaulting me!
                 <<jump PersonA1Hero>>
     <<elseif $numTaps == 2>>
         <<set $numTaps += 1>>
-        C:Help, this man is assaulting me!
+        C: Help, this man is assaulting me!
         <<jump PersonA1Hero>>
     <<endif>>
 
@@ -119,23 +124,22 @@ title: PersonA1Hero
 position: 586,-206
 ---
 <<lookBack 0>>
-A: Leave her alone!
+A: Begone, knave! Cease thy advances upon her!
 -> No way! I have to get off the bus!
-    A:Then you leave me no choice!
+    A: Thou dost force my hand, leaving me no recourse but to act!
     <<beatUpEnding>>
 -> Fine
-    A:And say your'e sorry
+    A: And say you're sorry
     -> I'm sorry
-        C:Thank you for standing up for me.
-        A:No problem, let's get our of here.
-        C:I have a boyfriend.
-        A:*leaves from embarrassment*
+        C: Thank you for standing up for me.
+        A: Dearest, might thou accompany me for a merry evening, where we may share laughter and delight?
+        C: I have a boyfriend.
+        A: *Leaves from embarrassment*
         <<characterLeave 0>>
         <<wait 5>>
         <<loadNextGroup>>
 <<stop>>
 ===
-
 
 title: AHitOnC
 ---
@@ -145,9 +149,164 @@ A: Hey
 C: Can I help you?
 A: Thou art the fairest flower in this garden of hearts, wilt thou grant me the pleasure of thy company?
 C: Weirdo
-<<characterLeave 2>>
 <<lookForward 0>>
-A: *sobbing*
+A: *Sobbing*
+<<characterLeave 2>>
+<<wait 5>>
 <<loadNextGroup>>
 <<stop>>
 ===
+
+title: PersonB1
+---
+<<declare $alreadyTappedD = false>>
+<<SpeakerLookBack>>
+
+<<if $alreadyTappedD>>
+D: Leave me alone
+
+<<if $weedKey>>
+-> I think I have something you want
+    D: Oh yeah, what might that be?
+        -> Give him the weed
+            D: Whoa, awesome!
+            <<jump AngryMomEnding>>
+-> Dude, just let me pass
+    D: Leave me alone
+<<else>>
+-> Dude, just let me pass
+    D: Leave me alone
+<<endif>>
+
+<<else>>
+<<set $alreadyTappedD = true>>
+D: I hate my mom
+
+<<if $weedKey>>
+-> I think I have something you want
+    D: Oh yeah, what might that be?
+        -> Give him the weed
+            D: Whoa, awesome!
+            <<jump AngryMomEnding>>
+-> Why?
+    D: Because she doesn't get me
+    D: She never listens
+    -> Just let me pass
+        D: I don't work for you, go find another way through
+-> Dude, just let me pass
+    D: Leave me alone
+<<else>>
+-> Why?
+    D: Because she doesn't get me
+    D: She never listens
+    -> Just let me pass
+        D: I don't work for you, go find another way through
+-> Dude, just let me pass
+    D: Leave me alone
+<<endif>>
+
+<<endif>>
+<<SpeakerLookForward>>
+<<stop>>
+
+===
+
+title: PersonB2
+---
+<<declare $dadJoke = "">>
+<<set $dadJoke = getDadJoke()>>
+<<SpeakerLookBack>>
+E: {$dadJoke}
+<<SpeakerLookForward>>
+<<stop>>
+===
+
+title: PersonB3
+---
+<<declare $alreadyTappedF = false>>
+<<declare $knowsWhatsWrongF = false>>
+<<SpeakerLookBack>>
+
+<<if $alreadyTappedF>>
+F: I'm so angry, I don't know what to do
+<<else>>
+F: Ugh, I've had it with my son
+<<endif>>
+<<if $knowsWhatsWrongF>>
+-> Show me the weed again
+    F: *Shows the weed to you*
+    -> That's not weed, that's just lettuce (lie)
+        F: Really!? I can't believe I overreacted like this
+        <<jump PeacefulEnding>>
+    -> I should probably hold on to that for you, it's illegal
+        F: Sure, I don't want anything illegal on me
+        F: *Gives you the bag of weed*
+        <<set $weedKey = true>>
+    -> Honestly, weed is not that bad, you should try some yourself
+        F: What chutzpah!
+    -> You have a bad son, he needs to learn to respect you
+        F: Thank you, perhaps you can make him feel the same way
+-> Look, I really have to get past, your personal problems don't interest me
+    F: Get lost, rude man
+<<else>>
+-> What's wrong?
+    <<set $knowsWhatsWrongF = true>>
+    F: He never listens
+    F: I told him a million times, drugs will ruin his life
+    F: We were having a nice day at the museum when suddenly I noticed something fall out of his bag
+    F: And when I picked it up, I instantly recognized it as weed
+    F: How dare he!? after all my warnings
+    F: *Shows you what she picked up*
+    F: Look at this, can you believe he had this on him
+        -> That's not weed, that's just lettuce (lie)
+            F: Really!? I can't believe I overreacted like this
+            <<jump PeacefulEnding>>
+        -> I should probably hold on to that for you, it's illegal
+            F: Sure, I don't want anything illegal on me
+            F: *Gives you the bag of weed*
+            <<set $weedKey = true>>
+        -> Honestly, weed is not that bad, you should try some yourself
+            F: What chutzpah!
+        -> You have a bad son, he needs to learn to respect you
+            F: Thank you, perhaps you can make him feel the same way
+        -> Great story, but I really have to go
+            F: I will not move for you, I am staying here with my family
+-> Ma'am, I just want to get past
+    F: You sound just like my son #last
+<<endif>>
+<<SpeakerLookForward>>
+<<stop>>
+===
+
+title: AngryMomEnding
+---
+
+<<lookBack 5>>
+F: WHAT IS THAT!?
+D: Leave me alone mom!
+F: This was the last straw!
+<<lookForward 3>>
+<<characterLeave 5>>
+<<loadNextGroup>>
+
+===
+
+title: PeacefulEnding
+---
+
+F: Son, I'm sorry, I judged too quickly
+<<lookBack 3>>
+D: For real mom?
+F: Yes, I had a lapse of judgment, can you forgive me
+D: Sure mom
+<<lookForward 5>>
+<<lookForward 3>>
+<<wait 1>>
+<<lookBack 3>>
+D: Thanks dude, I can't believe I got off so easy
+D: Come, pass me
+<<lookForward 3>>
+<<loadNextGroup>>
+<<stop>>
+===
+

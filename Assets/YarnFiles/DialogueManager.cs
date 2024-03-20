@@ -25,6 +25,12 @@ public class DialogueManager : MonoBehaviour
         return _currentSpeaker;
     }
     
+    [YarnFunction("getDadJoke")]
+    public static string getDadJoke()
+    {
+        return GameManager.instance.getRandomeDadJoke();
+    }
+    
     [YarnCommand("SpeakerLookBack")]
     public static void SpeakerLookForward()
     {
