@@ -46,14 +46,14 @@ public class SpeechBubble : DialogueViewBase
             curSpeechBubble.GetComponentInChildren<TextMeshProUGUI>().text = dialogueLine.TextWithoutCharacterName.Text;
         }
 
-        onDialogueLineFinished += GameManager.instance.MakeCharactersStopGlow;
+        onDialogueLineFinished += GameManager.Instance.MakeCharactersStopGlow;
         StartCoroutine(InnerRunLine(dialogueLine, onDialogueLineFinished));
     }
 
     private void ActivateGlow(string dialogueLineCharacterName)
     {
         if (dialogueLineCharacterName is null or "P") return;
-        GameManager.instance.MakeCharacterGlow(dialogueLineCharacterName[0] % 'A');
+        GameManager.Instance.MakeCharacterGlow(dialogueLineCharacterName[0] % 'A');
     }
 
     private IEnumerator InnerRunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
@@ -85,7 +85,7 @@ public class SpeechBubble : DialogueViewBase
 
     public override void DialogueComplete()
     {
-        GameManager.instance.MakeCharactersStopGlow();
+        GameManager.Instance.MakeCharactersStopGlow();
         if (curSpeechBubble != null)
         {
             curSpeechBubble.SetActive(false);

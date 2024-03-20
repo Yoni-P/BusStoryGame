@@ -37,7 +37,7 @@ A: Love is a madness most discreet, consuming hearts in silent flames, where rea
     A: True love doth ne'er run smooth, yet 'tis a balm that soothes the wounds of time, knitting souls in fate's eternal dance. #last
 -> What did you say?
     A: *Sigh* I think my true love is just two steps to my left, If only we were closer... #last
-    <<set $avihaiKey = true>>
+    <<set $firstKey = true>>
 <<SpeakerLookForward>>
 <<stop>>
 ===
@@ -55,7 +55,7 @@ B: What! If I let you pass, everyone will want to pass me!
 <<set $alreadyTappedB = true>>
 <<endif>>
 
-<<if $avihaiKey == false>>
+<<if $firstKey == false>>
 -> Ugh
 <<else>>
 -> Ugh

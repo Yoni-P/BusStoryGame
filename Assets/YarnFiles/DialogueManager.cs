@@ -6,76 +6,70 @@ using Yarn.Unity;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private DialogueRunner _dialogueRunner;
-     private static int _currentSpeaker = 0;
+    private static int _currentSpeaker = 0;
 
-     private void Start()
-     {
-            
-     }
-
-     public void setSpeaker(int speaker)
+    public void SetSpeaker(int speaker)
     {
         _currentSpeaker = speaker;
     }
     
     [YarnFunction("setSpeaker")]
-    public static int updateSpeaker()
+    public static int UpdateSpeaker()
     {
         return _currentSpeaker;
     }
     
     [YarnFunction("getDadJoke")]
-    public static string getDadJoke()
+    public static string GetDadJoke()
     {
-        return GameManager.instance.getRandomeDadJoke();
+        return GameManager.Instance.GetRandomDadJoke();
     }
     
     [YarnCommand("SpeakerLookBack")]
     public static void SpeakerLookForward()
     {
-        GameManager.instance.MakeCharacterLookBack(_currentSpeaker);
+        GameManager.Instance.MakeCharacterLookBack(_currentSpeaker);
     }
     
     [YarnCommand("SpeakerLookForward")]
     public static void SpeakerLookBack()
     {
-        GameManager.instance.MakeCharacterLookForward(_currentSpeaker);
+        GameManager.Instance.MakeCharacterLookForward(_currentSpeaker);
     }
     
     [YarnCommand("switchPlaces")]
-    public static void switchPlaces(int speaker1, int speaker2)
+    public static void SwitchPlaces(int speaker1, int speaker2)
     {
-        GameManager.instance.SwitchPlaces(speaker1, speaker2);
+        GameManager.Instance.SwitchPlaces(speaker1, speaker2);
     }
     
     [YarnCommand("loadNextGroup")]
-    public static void loadNextGroup()
+    public static void LoadNextGroup()
     {
-        GameManager.instance.LoadNextGroup();
+        GameManager.Instance.LoadNextGroup();
     }
     
     [YarnCommand("lookForward")]
-    public static void lookForward(int speaker)
+    public static void LookForward(int speaker)
     {
-        GameManager.instance.MakeCharacterLookForward(speaker);
+        GameManager.Instance.MakeCharacterLookForward(speaker);
     }
     
     [YarnCommand("lookBack")]
-    public static void lookBack(int speaker)
+    public static void LookBack(int speaker)
     {
-        GameManager.instance.MakeCharacterLookBack(speaker);
+        GameManager.Instance.MakeCharacterLookBack(speaker);
     }
 
     [YarnCommand("beatUpEnding")]
-    public static void beatUpEnding()
+    public static void BeatUpEnding()
     {
-        GameManager.instance.BeatUpEnding();
+        GameManager.Instance.BeatUpEnding();
     }
 
     [YarnCommand("characterLeave")]
-    public static void characterLeave(int speaker)
+    public static void CharacterLeave(int speaker)
     {
-        GameManager.instance.CharacterLeave(speaker);
+        GameManager.Instance.CharacterLeave(speaker);
     }
 }
