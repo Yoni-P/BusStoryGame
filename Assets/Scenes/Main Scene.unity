@@ -329,8 +329,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.1
-  dialogObject: {fileID: 520302473}
+  dialougeObject: {fileID: 520302473}
   dialogueManager: {fileID: 1714896147}
   characterIndex: 5
   idleSprite: {fileID: -1980749532, guid: bd010b54d10c1c54999105af229e4efe, type: 3}
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.1
-  dialogObject: {fileID: 520302473}
+  dialougeObject: {fileID: 520302473}
   dialogueManager: {fileID: 1714896147}
   characterIndex: 1
   idleSprite: {fileID: -34521762, guid: eeda4878aa086b546a15a0aab1837a2c, type: 3}
@@ -1851,17 +1851,6 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &520302479 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
-  m_PrefabInstance: {fileID: 349168910}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520302473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &520302482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,8 +1990,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2452,7 +2441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.1
-  dialogObject: {fileID: 520302473}
+  dialougeObject: {fileID: 520302473}
   dialogueManager: {fileID: 1714896147}
   characterIndex: 0
   idleSprite: {fileID: 656614019, guid: fca3edec39007d14f9305cf9181b76d1, type: 3}
@@ -2684,7 +2673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.1
-  dialogObject: {fileID: 520302473}
+  dialougeObject: {fileID: 520302473}
   dialogueManager: {fileID: 1714896147}
   characterIndex: 3
   idleSprite: {fileID: 1243154517, guid: 45fe1690d4d6e144fa447f1c30060c19, type: 3}
@@ -2914,8 +2903,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3300,7 +3289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.1
-  dialogObject: {fileID: 520302473}
+  dialougeObject: {fileID: 520302473}
   dialogueManager: {fileID: 1714896147}
   characterIndex: 2
   idleSprite: {fileID: 619077377, guid: 64f020fc81d04924698b80e5d4e2c5a3, type: 3}
@@ -3531,8 +3520,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4067,7 +4056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1.1
-  dialogObject: {fileID: 520302473}
+  dialougeObject: {fileID: 520302473}
   dialogueManager: {fileID: 1714896147}
   characterIndex: 4
   idleSprite: {fileID: -1737693326, guid: 3cfc8863077609e4e98af92f80d70d93, type: 3}
@@ -4170,7 +4159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b30e69f7ccfea54d99302b4107b41fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogueRunner: {fileID: 520302479}
 --- !u!114 &1714896148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4372,8 +4360,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4591,8 +4579,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
-  m_fontSizeBase: 52
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
